@@ -171,22 +171,23 @@ body {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-contacts-link:hover .contact-icon,
-.header-contacts-link:focus .contact-icon{
-    fill: currentColor
-}
-
 .header-contacts-link:hover,
 .header-contacts-link:focus {
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
-.contacts .item+.item {
-    margin-left: 50px;
-}
-
 .contact-icon {
     margin-right: 10px;
     fill: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contacts-link:hover .contact-icon,
+.header-contacts-link:focus .contact-icon{
+    fill: currentColor;
+}
+
+.contacts .item+.item {
+    margin-left: 50px;
 }
 
 /* Main content */
@@ -447,6 +448,9 @@ body {
 }
 .client-icon{
     fill: var(--client-link-bg-color);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 .clients-link:hover .client-icon,
 .clients-link:focus .client-icon {
@@ -554,7 +558,7 @@ address {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0px 4px 4px 0px #00000040;
     cursor: pointer;
-    transition-property: var(--accent-color);
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -608,9 +612,6 @@ body {
     margin-bottom: 30px;
     border-bottom: 1px var(--project-conteiner-color);
     cursor: pointer;
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .progect-box:nth-child(3n) {

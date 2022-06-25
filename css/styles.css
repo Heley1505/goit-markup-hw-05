@@ -631,10 +631,10 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover {
+.project-link:hover,
+.project-link:focus {
     box-shadow: 0px 4px 4px 0px #00000040;
 }
-
 .project-tittle {
     color: var(--title-text-color);
     font-size: 18px;
